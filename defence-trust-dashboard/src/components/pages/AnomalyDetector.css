@@ -1,0 +1,376 @@
+/* Anomaly Detector Page */
+
+.anomaly-container {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 16px;
+}
+
+.anomaly-input-panel,
+.anomaly-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.anomaly-input-panel > .panel-title,
+.anomaly-info-panel > .info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.anomaly-input-panel > .panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Form */
+.behavior-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-elevated);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Results */
+.results-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.result-card {
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-success {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid var(--accent-green);
+}
+
+.result-critical {
+  background: rgba(239, 68, 68, 0.08);
+  border: 2px solid var(--accent-red);
+  border-radius: 8px;
+  animation: pulse 2s infinite;
+}
+
+.result-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.result-success .result-title {
+  color: var(--accent-green);
+}
+
+.result-critical .result-title {
+  color: var(--accent-red);
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-check {
+  font-size: 12px;
+  color: var(--accent-green);
+}
+
+/* Anomalies List */
+.anomalies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.anomaly-item {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-red);
+}
+
+.anomaly-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.anomaly-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: monospace;
+}
+
+.anomaly-description {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.anomaly-confidence {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-align: right;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.action-buttons button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Info Cards */
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.empty-hint {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+/* Profile Table */
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-table tr:last-child {
+  border-bottom: none;
+}
+
+.profile-param {
+  padding: 8px;
+  text-align: left;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.profile-value {
+  padding: 8px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+/* History Stats & Table */
+.history-stats {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.history-table thead {
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table th {
+  padding: 8px;
+  text-align: left;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.history-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.history-table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.history-row-none {
+  background: none;
+}
+
+.history-row-flagged {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.history-row-shutdown {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.history-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.history-badge.history-none {
+  background: rgba(100, 116, 139, 0.2);
+  color: var(--text-muted);
+}
+
+.history-badge.history-flagged {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent-amber);
+}
+
+.history-badge.history-shutdown {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--accent-red);
+}
+
+.text-center {
+  text-align: center;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 1024px) {
+  .anomaly-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .behavior-form,
+  .info-card {
+    padding: 12px;
+  }
+
+  .form-section {
+    padding: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}

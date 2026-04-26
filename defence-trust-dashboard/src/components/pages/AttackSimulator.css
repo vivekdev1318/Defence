@@ -1,0 +1,194 @@
+/* Attack Simulator Page */
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.scenario-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scenario-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.scenario-card.card-red {
+  border-left: 4px solid var(--accent-red);
+}
+
+.scenario-card.card-amber {
+  border-left: 4px solid var(--accent-amber);
+}
+
+.scenario-card.card-green {
+  border-left: 4px solid var(--accent-green);
+}
+
+.scenario-icon {
+  font-size: 32px;
+}
+
+.scenario-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.scenario-description {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.scenario-expected {
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 10px;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 4px;
+  border-left: 2px solid var(--accent-blue);
+}
+
+.scenario-expected strong {
+  color: var(--text-muted);
+}
+
+/* Results */
+.scenario-result {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid;
+  margin-top: 8px;
+}
+
+.result-blocked {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+.result-immutable {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+}
+
+.result-success {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+/* Demo Steps */
+.demo-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.demo-step {
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.demo-step.completed {
+  color: var(--accent-green);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* Statistics */
+.attack-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scenario-card.full-width {
+    grid-column: 1;
+  }
+
+  .attack-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .scenarios-grid {
+    gap: 12px;
+  }
+
+  .scenario-card {
+    padding: 16px;
+  }
+
+  .scenario-icon {
+    font-size: 24px;
+  }
+
+  .scenario-title {
+    font-size: 13px;
+  }
+
+  .attack-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-chip {
+    padding: 16px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+}
